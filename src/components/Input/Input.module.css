@@ -1,0 +1,68 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.label {
+	width: fit-content;
+	margin-left: 1rem;
+
+	/* TODO: add for all sizes */
+	font-size: 0.8rem;
+}
+
+.input {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+
+	min-width: 100px;
+	width: auto;
+
+	background-color: var(--pure-ui-background);
+	border: 1px solid var(--pure-ui-border);
+	border-radius: var(--pure-ui-border-radius);
+
+	outline: none;
+	resize: none;
+	box-shadow: none;
+
+	transition: all var(--pure-ui-transition);
+
+	&:disabled {
+		background-color: var(--pure-ui-disabled);
+		color: var(--pure-ui-disabled-text);
+		opacity: 0.5;
+	}
+
+	&:not(:disabled) {
+		&:hover {
+			background-color: var(--pure-ui-accent-background);
+		}
+
+		&:active,
+		&:focus {
+			background-color: var(--pure-ui-accent-background);
+			border: 1px solid var(--pure-ui-neutral);
+		}
+	}
+}
+
+.small {
+	height: 26px;
+	font-size: 0.7rem;
+	padding: 0px 8px;
+}
+
+.medium {
+	height: 32px;
+	font-size: 0.8rem;
+	padding: 0px 10px;
+}
+
+.large {
+	height: 38px;
+	font-size: 0.9rem;
+	padding: 0px 12px;
+}

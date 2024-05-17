@@ -8,7 +8,9 @@
 		"lib": ["es2015", "dom"],
 		"outDir": "./dist/",
 		"sourceMap": true,
-		"declaration": true
+		"declaration": true,
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true
 	},
 	"include": ["src"],
 	"exclude": ["node_modules", "dist", "./src/stories"]

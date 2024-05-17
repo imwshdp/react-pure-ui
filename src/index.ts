@@ -1,3 +1,5 @@
-import Button from './Button';
+import Button from './components/Button';
+import Input from './components/Input';
+import RadioButton from './components/RadioButton';
 
-export { Button };
+export { Button, Input, RadioButton };
