@@ -1,9 +1,10 @@
 import React, { ChangeEventHandler, useId } from 'react';
 
 import styles from './Input.module.css';
-import { DEFAULT_INPUT_PLACEHOLDER } from '../../model/constants.ts';
-import { InputProps } from './Input.interface';
-import { cn } from '../../helpers/cn.ts';
+import { DEFAULT_INPUT_PLACEHOLDER } from '@model/constants.ts';
+import { InputProps } from './Input.interface.ts';
+import { cn } from '@helpers/cn.ts';
+import { Search } from '@assets/search.tsx';
 
 function Input({
 	value,
@@ -13,6 +14,7 @@ function Input({
 	disabled,
 	placeholder,
 	label,
+	withIcon = false,
 	className,
 	style,
 	customProps
@@ -36,34 +38,38 @@ function Input({
 					</label>
 				)}
 
-				<input
-					type={type}
-					value={value}
-					onChange={onChangeHandler}
-					id={uniqueId}
-					name={`input-${uniqueId}`}
-					placeholder={placeholder || DEFAULT_INPUT_PLACEHOLDER}
-					disabled={disabled}
-					className={cn(styles.input, styles[`${size}`], className)}
-					style={style}
-					{...customProps}
-				/>
+				<div className={cn(styles.input_wrapper, styles[`${size}`], className)} style={style}>
+					{withIcon && <Search />}
+					<input
+						type={type}
+						value={value}
+						onChange={onChangeHandler}
+						id={uniqueId}
+						name={`input-${uniqueId}`}
+						placeholder={placeholder || DEFAULT_INPUT_PLACEHOLDER}
+						disabled={disabled}
+						className={styles.input}
+						{...customProps}
+					/>
+				</div>
 			</div>
 		);
 	}
 
 	return (
-		<input
-			type={type}
-			value={value}
-			onChange={onChangeHandler}
-			id={uniqueId}
-			name={`input-${uniqueId}`}
-			placeholder={placeholder || DEFAULT_INPUT_PLACEHOLDER}
-			disabled={disabled}
-			className={cn(styles.input, styles[`${size}`], className)}
-			style={style}
-		/>
+		<div className={cn(styles.input_wrapper, styles[`${size}`], className)} style={style}>
+			{withIcon && <Search />}
+			<input
+				type={type}
+				value={value}
+				onChange={onChangeHandler}
+				id={uniqueId}
+				name={`input-${uniqueId}`}
+				placeholder={placeholder || DEFAULT_INPUT_PLACEHOLDER}
+				className={styles.input}
+				disabled={disabled}
+			/>
+		</div>
 	);
 }
 

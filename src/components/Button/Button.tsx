@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { ButtonProps } from './Button.interface.js';
+import { ButtonProps } from './Button.interface.ts';
 import styles from './Button.module.css';
-import { cn } from '../../helpers/cn.ts';
+import { cn } from '@helpers/cn.ts';
 
 function Button({ children, size = 'medium', disabled, className, style, customProps }: ButtonProps) {
 	return (

@@ -2,7 +2,7 @@ import React, { MouseEventHandler, useState } from 'react';
 
 import { DraggableProps } from './Draggable.interface.ts';
 import styles from './Draggable.module.css';
-import { cn } from '../../helpers/cn.ts';
+import { cn } from '@helpers/cn.ts';
 import { moveAt } from './utils/moveAt.ts';
 import {
 	DND_DRAGGABLE_CLASS,

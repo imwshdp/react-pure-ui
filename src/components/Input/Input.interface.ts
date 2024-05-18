@@ -10,6 +10,7 @@ export interface InputProps {
 
 	placeholder?: string;
 	label?: string;
+	withIcon?: boolean;
 
 	className?: string;
 	style?: React.CSSProperties;

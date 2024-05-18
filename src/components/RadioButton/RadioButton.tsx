@@ -1,6 +1,6 @@
 import React, { useId } from 'react';
 
-import { RadioButtonProps } from './RadioButton.interface.js';
+import { RadioButtonProps } from './RadioButton.interface.ts';
 import styles from './RadioButton.module.css';
 import { cn } from '../../helpers/cn.ts';
 

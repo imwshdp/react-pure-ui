@@ -2,8 +2,8 @@ import React, { useEffect, useId } from 'react';
 
 import { DndProviderProps } from './DndProvider.interface.ts';
 import styles from './DndProvider.module.css';
-import { DND_DRAGGABLE_CLASS, DND_PROVIDER_CLASS } from '../../model/dnd.ts';
-import { cn } from '../../helpers/cn.ts';
+import { DND_DRAGGABLE_CLASS, DND_PROVIDER_CLASS } from '@model/dnd.ts';
+import { cn } from '@helpers/cn.ts';
 
 function DndProvider({
 	children,

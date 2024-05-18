@@ -1,2 +1,2 @@
-export type { ButtonProps } from './Button.interface.js';
-export { default } from './Button.js';
+export type { ButtonProps } from './Button.interface.ts';
+export { default } from './Button.tsx';
