@@ -1,0 +1,11 @@
+.wrapper {
+	display: flex;
+}
+
+.open {
+	visibility: visible;
+}
+
+.closed {
+	visibility: hidden;
+}

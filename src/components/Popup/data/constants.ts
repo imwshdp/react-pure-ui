@@ -1,0 +1,2 @@
+export const DEFAULT_POPUP_WINDOW_PADDING_IN_PX = 10;
+export const DEFAULT_POPUP_GAP_IN_PX = 10;
