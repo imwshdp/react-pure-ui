@@ -6,6 +6,8 @@ export interface ButtonProps {
 	size?: ComponentSize;
 	disabled?: boolean;
 
+	onClick?: () => void;
+
 	className?: string;
 	style?: React.CSSProperties;
 	customProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;

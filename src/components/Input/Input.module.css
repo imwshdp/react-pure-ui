@@ -1,3 +1,5 @@
+@import url('@assets/styles/sizes.css');
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -59,22 +61,4 @@
 	box-shadow: none;
 
 	appearance: none;
-}
-
-.small {
-	height: 26px;
-	font-size: 0.7rem;
-	padding: 0px 8px;
-}
-
-.medium {
-	height: 32px;
-	font-size: 0.8rem;
-	padding: 0px 10px;
-}
-
-.large {
-	height: 38px;
-	font-size: 0.9rem;
-	padding: 0px 12px;
 }

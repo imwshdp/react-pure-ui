@@ -1,8 +1,8 @@
 import { CSSProperties } from 'react';
 
 export interface RadioButtonProps {
-	value: number | string;
-	onChange: () => void;
+	value: string | number;
+	onChange: (value: string | number) => void;
 	checked: boolean;
 
 	disabled?: boolean;
@@ -11,6 +11,5 @@ export interface RadioButtonProps {
 
 	style?: CSSProperties;
 	className?: string;
-
 	customProps?: React.InputHTMLAttributes<HTMLInputElement>;
 }
