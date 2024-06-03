@@ -3,10 +3,10 @@ import React, { forwardRef, useRef } from 'react';
 import { SingleSelectProps } from './SingleSelect.interface.ts';
 import styles from '../../Select.module.css';
 
-import { ArrowDownIcon } from '@assets/icons/ArrowDownIcon.tsx';
 import { cn } from '@helpers/cn.ts';
 import type { ExtendedSelectProps } from '@components/Select/Select.interface.ts';
 import Popup from '@components/Popup';
+import { Icons } from '@assets/icons/index.ts';
 
 const SingleSelect = forwardRef<HTMLElement | HTMLDivElement | null, SingleSelectProps & ExtendedSelectProps>(
 	(
@@ -67,7 +67,7 @@ const SingleSelect = forwardRef<HTMLElement | HTMLDivElement | null, SingleSelec
 									ref={selectButtonRef}
 									className={cn(styles.toggle, isOpen ? styles.toggled : undefined)}
 									onClick={toggleOptions}>
-									<ArrowDownIcon />
+									<Icons.Arrow />
 								</button>
 							</div>
 						}
@@ -85,7 +85,7 @@ const SingleSelect = forwardRef<HTMLElement | HTMLDivElement | null, SingleSelec
 					<div className={styles.divider} />
 
 					<button className={cn(styles.toggle, isOpen ? styles.toggled : undefined)} onClick={toggleOptions}>
-						<ArrowDownIcon />
+						<Icons.Arrow />
 					</button>
 				</div>
 

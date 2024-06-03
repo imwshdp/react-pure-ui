@@ -1,0 +1,3 @@
+.wrapper {
+	transition: all var(--pure-ui-transition);
+}

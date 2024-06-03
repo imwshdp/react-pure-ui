@@ -3,10 +3,10 @@ import React, { forwardRef, useRef } from 'react';
 import { MultiSelectProps } from './MultiSelect.interface.ts';
 import styles from '../../Select.module.css';
 
-import { ArrowDownIcon } from '@assets/icons/ArrowDownIcon.tsx';
 import { cn } from '@helpers/cn.ts';
 import { ExtendedSelectProps, MultiSelectOptionType } from '@components/Select/Select.interface.ts';
 import Popup from '@components/Popup';
+import { Icons } from '@assets/icons/index.ts';
 
 const MultiSelect = forwardRef<HTMLElement | null, MultiSelectProps & ExtendedSelectProps>(
 	(
@@ -60,7 +60,15 @@ const MultiSelect = forwardRef<HTMLElement | null, MultiSelectProps & ExtendedSe
 
 		const renderLabels = () =>
 			value.map((valueItem, index) => {
-				return <li key={`label-${index}`}>{valueItem.label}</li>;
+				const onDelete = () => onChange(onChangeValueHandler(valueItem));
+				return (
+					<li key={`label-${index}`} className={styles.label}>
+						{valueItem.label}
+						<button className={styles.cross} onClick={onDelete}>
+							<Icons.Cross />
+						</button>
+					</li>
+				);
 			});
 
 		if (renderWithPortal) {
@@ -85,7 +93,7 @@ const MultiSelect = forwardRef<HTMLElement | null, MultiSelectProps & ExtendedSe
 									ref={selectButtonRef}
 									className={cn(styles.toggle, isOpen ? styles.toggled : undefined)}
 									onClick={toggleOptions}>
-									<ArrowDownIcon />
+									<Icons.Arrow />
 								</button>
 							</div>
 						}
@@ -103,7 +111,7 @@ const MultiSelect = forwardRef<HTMLElement | null, MultiSelectProps & ExtendedSe
 					<div className={styles.divider} />
 
 					<button className={cn(styles.toggle, isOpen ? styles.toggled : undefined)} onClick={toggleOptions}>
-						<ArrowDownIcon />
+						<Icons.Arrow />
 					</button>
 				</div>
 

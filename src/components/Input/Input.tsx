@@ -4,7 +4,7 @@ import styles from './Input.module.css';
 import { DEFAULT_INPUT_PLACEHOLDER } from '@model/constants.ts';
 import { InputProps } from './Input.interface.ts';
 import { cn } from '@helpers/cn.ts';
-import { SearchIcon } from '@assets/icons/SearchIcon.tsx';
+import { Icons } from '@assets/icons/index.ts';
 
 function Input({
 	value,
@@ -39,7 +39,7 @@ function Input({
 				)}
 
 				<div className={cn(styles.input_wrapper, styles[`${size}`], className)} style={style}>
-					{withIcon && <SearchIcon />}
+					{withIcon && <Icons.Search />}
 					<input
 						type={type}
 						value={value}
@@ -58,7 +58,7 @@ function Input({
 
 	return (
 		<div className={cn(styles.input_wrapper, styles[`${size}`], className)} style={style}>
-			{withIcon && <SearchIcon />}
+			{withIcon && <Icons.Search />}
 			<input
 				type={type}
 				value={value}
